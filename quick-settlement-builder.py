@@ -123,18 +123,21 @@ class Settlement:
 		x = len(arr)
 		y = len(arr) - 1
 		result = ""
-		for i in range(x):
-			if i == y:
-				result += ", and {}".format(arr[i])
-			else:
-				result += "{}, ".format(arr[i])
-
+		if x == 1:
+			result += arr[0]
+		else:
+			for i in range(x):
+				if i == y:
+					result += "and {}".format(arr[i])
+				else:
+					result += "{}, ".format(arr[i])
+		return result
 
 	# convert the object to a nicely formatted string
 	def toPrettyString(self):
 		sentence = '{} is a {} of about {} people, located in {}. '.format(self.name, self.size, self.population, self.location) 
-		sentence += 'Its residents are: {}. The main deities worshipped here are {}. '.format(self.printArray(self.races), self.printArray(self.gods))
-		sentence += 'It was built as a {}, producing {}. It has a some noticable features, such as {}'.format(self.purpose, self.printArray(self.resources), self.printArray(self.features))
+		sentence += 'Its residents are comprised of {}. The main god(s) worshipped here is/are {}. '.format(self.printArray(self.races), self.printArray(self.gods))
+		sentence += 'It was built as a {}, with resources such as {}. It has a some notable features, such as {}'.format(self.purpose, self.printArray(self.resources), self.printArray(self.features))
 		return sentence
 
 	def toCSVString(self):

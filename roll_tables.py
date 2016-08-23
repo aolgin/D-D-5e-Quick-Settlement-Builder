@@ -74,7 +74,7 @@ purpose_roll_table = {}
 inc_range_fill(1, 3, purpose_roll_table, ('Road/River convergence', 1, 0))
 inc_range_fill(4, 6, purpose_roll_table, ('Natural Resources', 2, 0))
 inc_range_fill(7, 8, purpose_roll_table, ('Mining Settlement', 1, 1))
-inc_range_fill(9, 10, purpose_roll_table, ('Military/Strategic Value', 0, 0))
+inc_range_fill(9, 10, purpose_roll_table, ('Military/Strategic point', 0, 0))
 
 # Fill metal resource table
 metal_roll_table = {
