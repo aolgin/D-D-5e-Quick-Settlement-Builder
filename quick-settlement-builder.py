@@ -200,6 +200,7 @@ def __main__():
 	settlement_instance = Settlement()
 
 	# Ask for input (currently pseudo code)
+	print('How many settlements would you like to generate?: ')
 	num_settlements = int(raw_input())
 
 	# Create basic gui
